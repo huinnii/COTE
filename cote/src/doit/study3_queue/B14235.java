@@ -8,12 +8,15 @@ public class B14235 {
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 
+		
+		//PriorityQueue<Integer> presentPQ = new PriorityQueue<>(Collections.reverseOrder());
+		
 		//큰 수 우선순위 큐 -> 가장 가치가 큰 선물부터 주기 때문
 		PriorityQueue<Integer> que = new PriorityQueue<>((o1,o2)-> {
 			return o2-o1;
 		});
 
-		int n=sc.nextInt();   //거점지 바문 횟수
+		int n=sc.nextInt();   //거점지 방문 횟수
 		int a=0;
 
 		StringBuilder sb = new StringBuilder();
@@ -40,5 +43,4 @@ public class B14235 {
 		}   
 		System.out.println(sb);
 	}
-
 }

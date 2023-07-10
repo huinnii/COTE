@@ -11,9 +11,10 @@ public class B1715 {
 
 		//오름차순 우선순위큐
 		//개수가 적은 카드묶음부터 비교해야 비교횟수가 최소가 됨
-		PriorityQueue<Integer> que = new PriorityQueue<>((o1,o2)-> {
-			return o1-o2;
-		});
+		PriorityQueue<Integer> que = new PriorityQueue<>();
+//		((o1,o2)-> {
+//			return o1-o2;
+//		});
 
 		int n=sc.nextInt();   //카드 묶음 개수
 		int result=0;   //최소 비교 횟수

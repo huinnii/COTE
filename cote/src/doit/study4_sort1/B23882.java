@@ -23,7 +23,6 @@ class B23882{
 			int max=last;
 
 			for(int j=0;j<last;j++) {
-
 				if(a[j]>a[max])		
 					max=j;
 			}

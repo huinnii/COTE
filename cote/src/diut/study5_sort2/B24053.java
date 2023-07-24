@@ -16,7 +16,6 @@ class B24053{
 			int loc = i-1;
 			int newItem = a[i];
 
-
 			while(0<=loc && newItem < a[loc]) {
 
 				a[loc+1]=a[loc];

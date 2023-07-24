@@ -4,44 +4,28 @@ package doit.study5_sort3;
 
 import java.util.*;
 
-public class B18310 {
+class B18310{
 
-	public static void main(String[] args) {
-		
+	public static void main(String[] args){
+
 		Scanner sc = new Scanner(System.in);
-		
-		int n= sc.nextInt();
-		
-		//집 위치 배열
-		int[] homes=new int[n];
-		
 
-		int maxID=0;
-		for(int i=0;i<n;i++) {
-			homes[i]=sc.nextInt();	
-			maxID=Math.max(maxID,homes[i]);
-		}
+		int n = sc.nextInt(); //집 개수
+		int[] homes = new int[n]; //집 위치 배열
 		
+		for(int i=0;i<n;i++)
+			homes[i]=sc.nextInt();
+
+		//집 위치 오름차순 정렬
 		Arrays.sort(homes);
+
+		// 안테나로부터 모든 집까지의 거리의 총 합이 최소가 되려면
+		// 안테나가 최대한 가운데 위치해야 함
+		// 홀수 : 가운데 
+		// ex) n=5 (5-1)/2=2 답:2번째 
+		// 짝수 : 가운데로부터 왼쪽 위치(문제에서 여러 개 값이 도출될 경우 가장 작은 값을 출력하라고 요규)
+		// ex) n=4 (4-1)/2=1 답:1번째
 		
-		//결과
-		int result=homes[0];
-		
-		int max=0;
-		for(int i=1;i<homes.length;i++) {
-			int distance=homes[i]-homes[i-1];
-			if(max<distance) {
-				max=distance;
-				int middle=Math.round((float)maxID/2);
-				int a=Math.abs(middle-homes[i-1]);
-				int b=Math.abs(middle-homes[i]);
-				if(a<b)
-					result=homes[i-1];
-				else
-					result=homes[i];
-			}
-		}
-				
-		System.out.println(result);
-	}
+		System.out.println(homes[(n-1)/2]);
+	}												
 }

@@ -51,7 +51,7 @@ class B1202{
 			
 			jewels.add(new Jewel(m,v));
 		}
-
+		
 		for(int i=0;i<k;i++) {
 			int c=sc.nextInt();
 			bag[i]=c;
@@ -61,10 +61,9 @@ class B1202{
 		Collections.sort(jewels,new JewelComparator());
 		//가방리스트 - 최대무게 가벼운 순으로 정렬
 		Arrays.sort(bag);
-
+		
 		//보석 가격 합의 최댓값
 		long sum=0;
-
 		
 		//1 가방에 넣을 수 있는 보석을 찾아 가격을 pq에 추가(가방의 수만큼 진행)
 		//2. pq의 가장 앞에 있는 값(가방에 넣을 수 있는 가격 중 최대값)을 sum에 더함
@@ -72,7 +71,7 @@ class B1202{
 		//3. 보석 리스트의 마지막으로 추가했던 보석 이후의 인덱스부터 1,2번을 진행
 		//4. while문 탈출 조건 : 보석이 pq에 모두 들어갔거나, 가방보다 보석의 무게가 크면 더이상 pq에 추가를 할 필요 없음
 		
-		int j=0; //보석 리스트 인덱스	
+		int j=0; //보석 리스트 인덱스
 		for(int i=0;i<k;i++) {
 			// 가방에 넣을 수 있는 무게의 보석들은 모두 pq에 추가
 			while(j<jewels.size()&&jewels.get(j).weight<=bag[i])

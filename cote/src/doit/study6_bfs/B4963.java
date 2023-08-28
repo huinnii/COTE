@@ -7,7 +7,6 @@ import java.util.*;
 class B4963{
 
  static int h,w; //h: 높이 , w: 너비
- static int cnt;
 
  static int[] dx = {0,1,0,-1,1,-1,1,-1};
  static int[] dy = {1,0,-1,0,1,1,-1,-1};
@@ -26,7 +25,7 @@ class B4963{
        if(h==0 && w==0)
           break;
 
-       cnt=0;
+       int cnt=0;
 
        arr = new int[h][w];
        visited = new boolean[h][w];

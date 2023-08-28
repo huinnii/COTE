@@ -17,9 +17,9 @@ class B7576{
  static ArrayList<Integer[]> list;
 
  public static void main(String[] args){
-
+	 
     Scanner sc = new Scanner(System.in);
-
+    
     int result=0;
     
     list = new ArrayList<>();
